@@ -2,7 +2,9 @@
 
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/Card';
-import { Code, Palette, Rocket } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
+import { Code, Palette, Rocket, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const members = [
   {
@@ -45,7 +47,7 @@ export function SocialProof() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-bold mb-6"
           >
-            Who We Are
+            Meet Our Members
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -58,7 +60,7 @@ export function SocialProof() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {members.map((member, index) => (
             <motion.div
               key={member.role}
@@ -83,6 +85,15 @@ export function SocialProof() {
               </Card>
             </motion.div>
           ))}
+        </div>
+
+        <div className="text-center">
+          <Link href="/members">
+            <Button size="lg" variant="outline" className="gap-2 group">
+              View All Members
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

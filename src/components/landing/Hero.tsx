@@ -30,10 +30,13 @@ export function Hero() {
             <span>Powered by the Solana Ecosystem</span>
           </motion.div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-[1.1]">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-[1.1] relative">
+            {/* Subtle Brazilian Element */}
+            <div className="absolute -top-12 -right-12 w-24 h-24 bg-brazil-green/20 rounded-full blur-2xl animate-pulse opacity-50 hidden md:block" />
+            
             Ship Products. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-gray-500">Win Bounties.</span> <br />
-            <span className="text-gradient-brazil relative">
+            <span className="text-gradient-brazil relative inline-block">
               Get Funded.
               <svg className="absolute w-full h-3 -bottom-1 left-0 text-brazil-green opacity-30" viewBox="0 0 100 10" preserveAspectRatio="none">
                  <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" fill="none" />
