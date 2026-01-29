@@ -39,7 +39,7 @@ const features = [
 
 export function WhatWeDo() {
   return (
-    <section id="what-we-do" className="py-24 relative overflow-hidden bg-dark-bg">
+    <section id="what-we-do" className="py-24 relative overflow-hidden bg-[#FDFBF7]">
       {/* Background Decor */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-brazil-green/5 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-brazil-yellow/5 rounded-full blur-[100px] pointer-events-none" />
@@ -50,7 +50,7 @@ export function WhatWeDo() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold mb-6"
+            className="text-3xl md:text-5xl font-bold mb-6 text-gray-900"
           >
             Why Superteam?
           </motion.h2>
@@ -59,7 +59,7 @@ export function WhatWeDo() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-gray-400 max-w-2xl mx-auto text-lg"
+            className="text-gray-600 max-w-2xl mx-auto text-lg"
           >
             We provide the unfair advantage you need to succeed in Web3.
           </motion.p>
@@ -74,12 +74,12 @@ export function WhatWeDo() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card hoverEffect variant="glass" className="h-full group">
-                <div className="h-14 w-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:bg-brazil-green/10 transition-colors duration-300">
+              <Card hoverEffect variant="default" className="h-full group bg-white border-gray-200">
+                <div className="h-14 w-14 rounded-2xl bg-brazil-green/5 flex items-center justify-center mb-6 group-hover:bg-brazil-green/10 transition-colors duration-300">
                   <feature.icon className="h-7 w-7 text-brazil-green group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-brazil-yellow transition-colors duration-300">{feature.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-brazil-green transition-colors duration-300">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </Card>
             </motion.div>
           ))}

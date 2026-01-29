@@ -1,11 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brazil-green: #00E676;
-  --color-brazil-yellow: #FFEA00;
-  --color-dark-bg: #050505;
-  --color-card-bg: #0A0A0A;
-  --color-card-border: #27272a;
+  --color-brazil-green: #1B4B36;
+  --color-brazil-yellow: #FFC700;
+  --color-brazil-light: #FDFBF7;
   
   --animate-float: float 6s ease-in-out infinite;
   --animate-glow: glow 4s ease-in-out infinite;
@@ -22,8 +20,8 @@
 }
 
 :root {
-  --background: #050505;
-  --foreground: #ffffff;
+  --background: #FDFBF7;
+  --foreground: #1B4B36;
 }
 
 body {
@@ -39,42 +37,35 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #FDFBF7;
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #E4E4E7;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #A1A1AA;
 }
 
 /* Utilities */
 .glass-card {
-  background: rgba(18, 18, 18, 0.4);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(27, 75, 54, 0.05);
+  box-shadow: 0 4px 30px rgba(27, 75, 54, 0.05);
 }
 
 .text-gradient-brazil {
-  background: linear-gradient(to right, #00E676, #FFEA00);
+  background: linear-gradient(to right, #1B4B36, #15803D);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   background-size: 200% auto;
-  animation: shine 4s linear infinite;
-}
-
-@keyframes shine {
-  to {
-    background-position: 200% center;
-  }
 }
 
 .bg-gradient-brazil {
-  background: linear-gradient(135deg, #00E676 0%, #FFEA00 100%);
+  background: linear-gradient(135deg, #1B4B36 0%, #15803D 100%);
 }
 
 .mask-gradient {

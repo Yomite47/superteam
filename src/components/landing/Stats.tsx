@@ -11,9 +11,8 @@ const stats = [
 
 export function Stats() {
   return (
-    <section id="impact" className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-dark-bg" />
-      <div className="absolute inset-0 bg-gradient-to-b from-dark-bg via-brazil-green/5 to-dark-bg" />
+    <section id="impact" className="py-24 relative overflow-hidden bg-[#1B4B36]">
+      <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
@@ -26,10 +25,10 @@ export function Stats() {
               viewport={{ once: true }}
               className="p-6 md:p-8"
             >
-              <h3 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-white/50 mb-3 tracking-tight">
+              <h3 className="text-4xl md:text-6xl font-bold text-white mb-3 tracking-tight">
                 {stat.value}
               </h3>
-              <p className="text-brazil-green font-bold uppercase tracking-widest text-sm">
+              <p className="text-brazil-yellow font-bold uppercase tracking-widest text-sm">
                 {stat.label}
               </p>
             </motion.div>

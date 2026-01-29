@@ -8,10 +8,11 @@ import { Events } from '@/components/landing/Events';
 import { FAQ } from '@/components/landing/FAQ';
 import { CTA } from '@/components/landing/CTA';
 import { Footer } from '@/components/layout/Footer';
+import { Testimonials } from '@/components/landing/Testimonials';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-dark-bg selection:bg-brazil-green/30">
+    <main className="min-h-screen bg-[#FDFBF7] selection:bg-brazil-green/30">
       <Navbar />
       <Hero />
       <WhatWeDo />

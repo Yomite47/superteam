@@ -18,19 +18,19 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-dark-bg/80 backdrop-blur-md border-b border-white/5">
+    <nav className="fixed top-0 w-full z-50 bg-[#FDFBF7]/80 backdrop-blur-md border-b border-brazil-green/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center gap-3 font-bold text-xl tracking-tighter group">
-              <div className="relative w-10 h-10 overflow-hidden rounded-full border border-white/10 group-hover:border-brazil-green/50 transition-colors shadow-lg shadow-black/20">
-                 <Image 
-                   src="/images/logo.svg" 
-                   alt="Superteam Brazil Logo" 
-                   fill 
-                   className="object-cover"
-                   sizes="40px"
-                 />
+            <Link href="/" className="flex items-center gap-3 font-bold text-xl tracking-tighter group text-brazil-green">
+              <div className="relative w-10 h-10 overflow-hidden rounded-full border border-brazil-green/10 group-hover:border-brazil-green/50 transition-colors shadow-lg shadow-black/5">
+                <Image 
+                  src="/images/logo.svg" 
+                  alt="Superteam Brazil Logo" 
+                  fill 
+                  className="object-cover"
+                  sizes="40px"
+                />
               </div>
               <span className="hidden sm:inline-block">Superteam <span className="text-gradient-brazil">Brazil</span></span>
             </Link>
@@ -42,7 +42,7 @@ export function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-gray-600 hover:text-brazil-green px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   target={link.external ? '_blank' : undefined}
                 >
                   {link.name}
@@ -58,7 +58,7 @@ export function Navbar() {
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/5 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-brazil-green hover:bg-brazil-green/5 focus:outline-none"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -68,13 +68,13 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-dark-bg border-b border-white/5">
+        <div className="md:hidden bg-[#FDFBF7] border-b border-brazil-green/10">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className="text-gray-600 hover:text-brazil-green block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setIsOpen(false)}
                 target={link.external ? '_blank' : undefined}
               >

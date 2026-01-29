@@ -52,7 +52,7 @@ export default function MembersPage() {
   };
 
   return (
-    <main className="min-h-screen bg-dark-bg selection:bg-brazil-green/30">
+    <main className="min-h-screen bg-[#FDFBF7] selection:bg-brazil-green/30">
       <Navbar />
       
       <div className="pt-32 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,26 +62,26 @@ export default function MembersPage() {
              animate={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.5 }}
           >
-             <h1 className="text-5xl font-bold mb-4 tracking-tight">
+             <h1 className="text-5xl font-bold mb-4 tracking-tight text-gray-900">
                Community Directory
                <Sparkles className="inline-block ml-4 text-brazil-yellow w-8 h-8 animate-pulse" />
              </h1>
-             <p className="text-gray-400 text-lg max-w-2xl">
+             <p className="text-gray-600 text-lg max-w-2xl">
                Meet the builders, creatives, and operators shaping the future of Solana in Brazil.
              </p>
           </motion.div>
         </div>
 
         {/* Controls */}
-        <div className="flex flex-col lg:flex-row gap-6 mb-12 items-start lg:items-center justify-between sticky top-20 z-40 bg-dark-bg/95 backdrop-blur-xl py-4 border-b border-white/5 -mx-4 px-4 lg:mx-0 lg:px-0 lg:rounded-2xl lg:border lg:p-4">
+        <div className="flex flex-col lg:flex-row gap-6 mb-12 items-start lg:items-center justify-between sticky top-20 z-40 bg-[#FDFBF7]/95 backdrop-blur-xl py-4 border-b border-gray-200 -mx-4 px-4 lg:mx-0 lg:px-0 lg:rounded-2xl lg:border lg:p-4">
           <div className="relative w-full lg:w-96 group">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500 group-focus-within:text-brazil-green transition-colors" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-brazil-green transition-colors" />
             <input
               type="text"
               placeholder="Search members..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-black/20 border border-white/10 rounded-xl py-2.5 pl-10 pr-4 text-white focus:outline-none focus:border-brazil-green/50 focus:ring-1 focus:ring-brazil-green/50 transition-all placeholder:text-gray-600"
+              className="w-full bg-white border border-gray-200 rounded-xl py-2.5 pl-10 pr-4 text-gray-900 focus:outline-none focus:border-brazil-green/50 focus:ring-1 focus:ring-brazil-green/50 transition-all placeholder:text-gray-400 shadow-sm"
             />
           </div>
 
@@ -95,12 +95,12 @@ export default function MembersPage() {
                       onClick={() => setSelectedSkill(skill)}
                       className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all whitespace-nowrap flex items-center gap-2 border ${
                         isActive 
-                          ? 'bg-white text-black border-white shadow-lg shadow-white/10 scale-105' 
-                          : 'bg-white/5 text-gray-400 border-white/5 hover:bg-white/10 hover:border-white/10'
+                          ? 'bg-brazil-green text-white border-brazil-green shadow-lg shadow-brazil-green/20 scale-105' 
+                          : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50 hover:border-gray-300'
                       }`}
                     >
                       {skill}
-                      <span className={`text-[10px] py-0.5 px-1.5 rounded-full ${isActive ? 'bg-black/10' : 'bg-white/10'}`}>
+                      <span className={`text-[10px] py-0.5 px-1.5 rounded-full ${isActive ? 'bg-white/20' : 'bg-gray-100 text-gray-500'}`}>
                         {getSkillCount(skill)}
                       </span>
                     </button>
@@ -108,23 +108,23 @@ export default function MembersPage() {
                 })}
              </div>
              
-             <div className="hidden lg:block w-px h-8 bg-white/10 mx-2" />
+             <div className="hidden lg:block w-px h-8 bg-gray-200 mx-2" />
 
              <div className="relative ml-auto lg:ml-0 group w-full lg:w-auto">
-                 <button className="flex items-center justify-between lg:justify-start w-full lg:w-auto space-x-2 text-sm font-medium text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-white/5 transition-colors">
+                 <button className="flex items-center justify-between lg:justify-start w-full lg:w-auto space-x-2 text-sm font-medium text-gray-600 hover:text-brazil-green px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors">
                     <span>{sortBy === 'newest' ? 'Newest First' : 'Most Active'}</span>
                     <ChevronDown className="h-4 w-4" />
                  </button>
-                 <div className="absolute right-0 top-full mt-2 w-full lg:w-40 bg-card-bg border border-white/10 rounded-xl shadow-2xl overflow-hidden hidden group-hover:block z-50">
+                 <div className="absolute right-0 top-full mt-2 w-full lg:w-40 bg-white border border-gray-200 rounded-xl shadow-xl overflow-hidden hidden group-hover:block z-50">
                     <button 
                         onClick={() => setSortBy('newest')}
-                        className="w-full text-left px-4 py-3 text-sm hover:bg-white/5 text-gray-300 hover:text-white hover:pl-5 transition-all"
+                        className="w-full text-left px-4 py-3 text-sm hover:bg-gray-50 text-gray-700 hover:text-brazil-green hover:pl-5 transition-all"
                     >
                         Newest First
                     </button>
                     <button 
                         onClick={() => setSortBy('active')}
-                        className="w-full text-left px-4 py-3 text-sm hover:bg-white/5 text-gray-300 hover:text-white hover:pl-5 transition-all"
+                        className="w-full text-left px-4 py-3 text-sm hover:bg-gray-50 text-gray-700 hover:text-brazil-green hover:pl-5 transition-all"
                     >
                         Most Active
                     </button>
@@ -136,18 +136,18 @@ export default function MembersPage() {
         {loading ? (
            <div className="space-y-12">
               <div>
-                <Skeleton className="h-8 w-48 mb-6 rounded-lg" />
+                <Skeleton className="h-8 w-48 mb-6 rounded-lg bg-gray-200" />
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                    {[...Array(4)].map((_, i) => (
-                      <Skeleton key={i} className="h-[280px] w-full rounded-2xl" />
+                      <Skeleton key={i} className="h-[280px] w-full rounded-2xl bg-gray-200" />
                    ))}
                 </div>
               </div>
               <div>
-                <Skeleton className="h-8 w-32 mb-6 rounded-lg" />
+                <Skeleton className="h-8 w-32 mb-6 rounded-lg bg-gray-200" />
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                    {[...Array(8)].map((_, i) => (
-                      <Skeleton key={i} className="h-[280px] w-full rounded-2xl" />
+                      <Skeleton key={i} className="h-[280px] w-full rounded-2xl bg-gray-200" />
                    ))}
                 </div>
               </div>
@@ -163,8 +163,8 @@ export default function MembersPage() {
               {/* Core Team */}
               {coreTeam.length > 0 && (
                 <section className="mb-16">
-                  <h2 className="text-2xl font-bold mb-8 flex items-center">
-                    <span className="w-1.5 h-8 bg-gradient-brazil mr-4 rounded-full shadow-[0_0_15px_rgba(0,230,118,0.5)]"></span>
+                  <h2 className="text-2xl font-bold mb-8 flex items-center text-gray-900">
+                    <span className="w-1.5 h-8 bg-gradient-brazil mr-4 rounded-full shadow-sm"></span>
                     Core Team
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -182,7 +182,7 @@ export default function MembersPage() {
               {/* Members */}
               {communityMembers.length > 0 && (
                 <section>
-                   <h2 className="text-2xl font-bold mb-8 text-gray-400 pl-5 border-l border-white/10">
+                   <h2 className="text-2xl font-bold mb-8 text-gray-500 pl-5 border-l border-gray-200">
                      Community Members
                    </h2>
                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

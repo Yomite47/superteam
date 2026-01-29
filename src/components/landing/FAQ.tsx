@@ -31,14 +31,14 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-dark-bg relative overflow-hidden">
+    <section className="py-24 bg-[#FDFBF7] relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold mb-6"
+            className="text-3xl md:text-5xl font-bold mb-6 text-gray-900"
           >
             Frequently Asked Questions
           </motion.h2>
@@ -47,7 +47,7 @@ export function FAQ() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-gray-400 text-lg"
+            className="text-gray-600 text-lg"
           >
             Everything you need to know about our community.
           </motion.p>
@@ -61,11 +61,11 @@ export function FAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="border border-white/5 rounded-2xl bg-white/[0.02] overflow-hidden"
+              className="border border-gray-200 rounded-2xl bg-white overflow-hidden shadow-sm"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors"
+                className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors text-gray-900"
               >
                 <span className="font-semibold text-lg pr-8">{faq.question}</span>
                 <ChevronDown 
@@ -82,7 +82,7 @@ export function FAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+                    <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
                       {faq.answer}
                     </div>
                   </motion.div>

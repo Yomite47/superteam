@@ -39,7 +39,7 @@ const events = [
 
 export function Events() {
   return (
-    <section id="events" className="py-24 bg-dark-bg relative overflow-hidden">
+    <section id="events" className="py-24 bg-[#FDFBF7] relative overflow-hidden">
        {/* Background Decor */}
        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brazil-yellow/5 rounded-full blur-[120px] pointer-events-none" />
 
@@ -50,7 +50,7 @@ export function Events() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-5xl font-bold mb-4"
+              className="text-3xl md:text-5xl font-bold mb-4 text-gray-900"
             >
               Events
             </motion.h2>
@@ -59,7 +59,7 @@ export function Events() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-gray-400 text-lg"
+              className="text-gray-600 text-lg"
             >
               Join us IRL and Online.
             </motion.p>
@@ -78,24 +78,24 @@ export function Events() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card hoverEffect className="overflow-hidden p-0 h-full group cursor-pointer border-white/5 bg-card-bg">
+              <Card hoverEffect className="overflow-hidden p-0 h-full group cursor-pointer border-gray-200 bg-white shadow-sm">
                 <div className={`h-40 ${event.image} w-full relative overflow-hidden`}>
                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
                 </div>
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-4">
-                    <Badge variant={event.type === 'Upcoming' ? 'default' : 'outline'} className={event.type === 'Upcoming' ? 'bg-brazil-green/20 text-brazil-green border-brazil-green/50' : ''}>
+                    <Badge variant={event.type === 'Upcoming' ? 'default' : 'outline'} className={event.type === 'Upcoming' ? 'bg-brazil-green/10 text-brazil-green border-brazil-green/20' : ''}>
                       {event.type}
                     </Badge>
                   </div>
-                  <h3 className="font-bold text-xl mb-3 group-hover:text-brazil-green transition-colors duration-300 line-clamp-2">{event.title}</h3>
-                  <div className="space-y-3 text-sm text-gray-400">
+                  <h3 className="font-bold text-xl mb-3 text-gray-900 group-hover:text-brazil-green transition-colors duration-300 line-clamp-2">{event.title}</h3>
+                  <div className="space-y-3 text-sm text-gray-500">
                     <div className="flex items-center">
-                      <CalendarClock className="h-4 w-4 mr-3 text-brazil-yellow" />
+                      <CalendarClock className="h-4 w-4 mr-3 text-brazil-green" />
                       {event.date}
                     </div>
                     <div className="flex items-center">
-                      <MapPin className="h-4 w-4 mr-3 text-brazil-yellow" />
+                      <MapPin className="h-4 w-4 mr-3 text-brazil-green" />
                       {event.location}
                     </div>
                   </div>

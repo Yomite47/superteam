@@ -9,9 +9,9 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
 export const Card = forwardRef<HTMLDivElement, CardProps>(
   ({ className, hoverEffect = false, variant = 'default', ...props }, ref) => {
     const variants = {
-      default: 'bg-card-bg border border-white/5',
+      default: 'bg-white border border-gray-200 shadow-sm',
       glass: 'glass-card',
-      solid: 'bg-[#121212] border border-white/5',
+      solid: 'bg-[#1B4B36] text-white border border-white/5',
     };
 
     return (
@@ -20,7 +20,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
         className={cn(
           'rounded-2xl p-6 relative overflow-hidden',
           variants[variant],
-          hoverEffect && 'hover:-translate-y-1 hover:shadow-2xl hover:shadow-brazil-green/5 hover:border-brazil-green/20 transition-all duration-300 ease-out group',
+          hoverEffect && 'hover:-translate-y-1 hover:shadow-xl hover:border-brazil-green/20 transition-all duration-300 ease-out group',
           className
         )}
         {...props}

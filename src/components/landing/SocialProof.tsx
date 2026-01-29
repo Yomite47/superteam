@@ -19,23 +19,23 @@ const members = [
     name: 'Creative Member',
     role: 'UI/UX Designer',
     icon: Palette,
-    color: 'text-brazil-yellow',
-    bg: 'bg-brazil-yellow/10',
+    color: 'text-yellow-600',
+    bg: 'bg-yellow-50',
     description: "Designing the next generation of consumer crypto apps.",
   },
   {
     name: 'Operator Member',
     role: 'Community Lead',
     icon: Rocket,
-    color: 'text-blue-400',
-    bg: 'bg-blue-400/10',
+    color: 'text-blue-600',
+    bg: 'bg-blue-50',
     description: "Organizing events and growing the ecosystem in Brazil.",
   },
 ];
 
 export function SocialProof() {
   return (
-    <section className="py-24 bg-dark-bg relative overflow-hidden">
+    <section className="py-24 bg-white relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brazil-green/5 rounded-full blur-[120px] pointer-events-none" />
       
@@ -45,7 +45,7 @@ export function SocialProof() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold mb-6"
+            className="text-3xl md:text-5xl font-bold mb-6 text-gray-900"
           >
             Meet Our Members
           </motion.h2>
@@ -54,7 +54,7 @@ export function SocialProof() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-gray-400 text-lg"
+            className="text-gray-600 text-lg"
           >
             A diverse community of builders shipping products.
           </motion.p>
@@ -69,17 +69,17 @@ export function SocialProof() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card variant="glass" className="h-full border-white/5 bg-white/[0.02]">
+              <Card variant="default" className="h-full border-gray-100 bg-white shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-4 mb-6">
                    <div className={`w-12 h-12 rounded-xl ${member.bg} flex items-center justify-center`}>
                       <member.icon className={`h-6 w-6 ${member.color}`} />
                    </div>
                    <div>
-                     <h3 className="font-bold text-lg text-white">{member.name}</h3>
+                     <h3 className="font-bold text-lg text-gray-900">{member.name}</h3>
                      <p className="text-sm text-gray-500 font-medium uppercase tracking-wide">{member.role}</p>
                    </div>
                 </div>
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   "{member.description}"
                 </p>
               </Card>
